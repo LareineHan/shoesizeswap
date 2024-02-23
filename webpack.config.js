@@ -1,9 +1,9 @@
 const path = require('path');
 
 module.exports = {
-	mode: 'development', // or 'production'
+	mode: 'production',
 	entry: {
-		bundle: ['./sizeConverter.js', './scrape.js'],
+		bundle: ['./converter.js', './script.js', './sizes.js'], //
 	},
 	output: {
 		filename: 'bundle.js',
