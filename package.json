@@ -1,8 +1,8 @@
 {
-    "name": "sizswap",
+    "name": "Shoe Size Swap",
     "version": "1.0.0",
     "description": "",
-    "main": "sizeConverter.js",
+    "main": "index.html",
     "type": "module",
     "scripts": {
       "start": "parcel index.html",
