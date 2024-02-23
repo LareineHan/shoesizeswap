@@ -2,7 +2,7 @@
     "name": "Shoe Size Swap",
     "version": "1.0.0",
     "description": "",
-    "main": "converter.js",
+    "main": "index.html",
     "type": "module",
     "scripts": {
       "start": "parcel index.html",
