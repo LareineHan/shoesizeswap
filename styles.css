@@ -1,0 +1,278 @@
+/* body {
+    font-family: 'Roboto', Arial, sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(234, 61%, 94%, 0.72); /* light gray background */
+
+
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        to top right,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.9)
+      ),
+      url(https://cdn.pixabay.com/photo/2014/12/29/08/34/bricks-582611_1280.jpg);
+    background-size: cover;
+  }
+
+    
+  .app-container {
+    display: block;
+    /* flex-direction: column; */
+    padding-top: 20px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* subtle shadow */
+  }
+
+  .logo-container {
+    display: grid;
+    justify-content: center;
+
+  }
+  
+  .logo-text {
+    color: white;
+    font-family: monospace;
+    font-size: 2.4em;
+    letter-spacing: 10px;
+    text-shadow: 0px 0px 25px hotpink, 0px 0px 25px rgb(0, 0, 191),
+      0px 0px 25px rgb(0, 0, 191), 0px 0px 25px rgb(0, 0, 191);
+  }
+  
+  #SIZE, #SWAP {
+    animation: blink 2s 2;
+    animation-delay: 1s;
+    
+  }
+  
+  @keyframes blink {
+    from{text-shadow: 0px 0px 0px transparent; opacity: 0.3;}
+    25%{text-shadow: 0px 0px 0px transparent;opacity: 0.3;}
+    30%{text-shadow: 0px 0px 0px transparent;opacity: 0.3;}
+   50%{text-shadow: 0px 0px 25px hotpink, 0px 0px 25px rgb(0, 0, 191),
+      0px 0px 25px rgb(0, 0, 191), 0px 0px 25px rgb(0, 0, 191);opacity: 0.7; }
+     75%{ text-shadow: 0px 0px 0px transparent;opacity: 0.3;}
+    to{ text-shadow: 0px 0px 0px transparent;opacity: 0.3;}
+  }
+  
+  #SHOE{
+    animation: flicker 1.7s 1;
+    animation-delay: 4s;
+  }
+  .size-buttons-container {
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  } 
+  .size-buttons-container button {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    color: hsl(0, 0%, 11%); /* white text */
+    background-color: #e4e4e490; /* indigo button */
+    border: none;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: 650;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .size-buttons-container button:hover {
+    background-color:#ec0ac3; /* darker indigo on hover */
+    color: white;
+    font-weight:600;
+  }
+  .size-buttons-container button.active {
+    background-color: #ff0bc6; /* green button for active state */
+    color: white;
+    font-weight:600;
+  }
+  
+  select {
+    padding: 10px;
+    margin: auto;
+    font-size: 1rem;
+    color: whitesmoke; /* dark gray text */
+    border: 2px solid #404040; /* indigo border */
+    border-radius: none;
+    text-align: center;
+    background-color: hsla(0,0%,13%,1);
+    outline: none; /* remove outline */
+  }
+  
+  .form-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 35em;
+    border-radius: none;
+  }
+  
+  .source-region-div, .target-region-div {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }
+  .source-region-div label, .target-region-div label {
+    color:#9f9f9f;
+  }
+  
+  .source-region-div label, .target-region-div label, .source-region-div select, .target-region-div select, label.source-size, label.target-size {
+    display: block;
+    margin: 0.2em 2rem;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .form-group.output-div {
+    color: white;
+    flex-direction: column;
+    max-height: 3em;
+    animation: blink 2s 1;
+    animation-delay: 1s;
+    border-radius: 30px;
+    box-shadow:  0px 0px 25px rgb(0, 0, 191),
+      0px 0px 25px rgb(0, 0, 191), 0px 0px 25px rgba(0, 0, 191, 0);
+  }
+  
+  .form-group i {
+    font-size: 1.2em;
+    margin: 20px;
+    color: #333;
+  }
+  
+  #arrow_icon {
+    color: whitesmoke;
+    animation: blink 3s 1;
+    animation-delay: 1s;  
+    text-shadow: 0px 0px 25px hotpink, 0px 0px 25px rgb(0, 0, 191),
+    0px 0px 25px rgb(0, 0, 191), 0px 0px 25px rgb(0, 0, 191);
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    text-align: center; /* Center the text */
+}
+
+.footer-container a {
+    color: rgba(245, 245, 245, 0.782);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-container a:hover {
+    color: #ff0bc6; /* Green text on hover */
+}
+
+.footer-container p {
+    margin: 0;
+    font-size: small;
+}
+
+.foot-box1 {
+  display: flex;
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-self: flex-end;
+}
+
+.social-links{
+  margin-top:10px;
+} 
+  @media  screen and (max-width: 615px){
+    h1 {
+      font-size: 1.4em;
+      margin: auto;
+      padding-bottom: 1em;
+      padding-top: 1em;
+      text-align: center;
+    }
+    .form-group {
+      max-width: 100%;
+    }
+    .source-region-div, .target-region-div {
+      margin: 10px;
+      font-size: 0.8em;
+    }
+    .source-region-div select, .target-region-div select, label.source-size, label.target-size {
+      margin: 1em 1rem;
+  
+    }
+    .source-region-div label, .target-region-div label {
+      display: none;
+    }
+    .output-div {
+      margin: 10px;
+      font-size: 0.7em;
+    }
+  
+  }
+  
+  @media (max-width: 326px) {
+    .form-group .arrow-icon {
+      display: none;
+    }
+  }
+  /* Path: styles.css */
+
+  
+  @media  screen and (max-width: 615px){
+    h1 {
+      font-size: 1.4em;
+      margin: auto;
+      padding-bottom: 1em;
+      padding-top: 1em;
+      text-align: center;
+    }
+    .form-group {
+      max-width: 100%;
+    }
+    .source-region-div, .target-region-div {
+      margin: 10px;
+      font-size: 0.8em;
+    }
+    .source-region-div select, .target-region-div select, label.source-size, label.target-size {
+      margin: 1em 1rem;
+  
+    }
+    .source-region-div label, .target-region-div label {
+      display: none;
+    }
+    .output-div {
+      margin: 10px;
+      font-size: 0.7em;
+    }
+    .slogan {
+      display: none;
+    }
+  
+  }
+  
+  @media (max-width: 326px) {
+    .form-group .arrow-icon {
+      display: none;
+    }
+  }
