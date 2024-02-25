@@ -7,7 +7,7 @@
     "browserslist": "> 0.5%, last 2 versions, not dead",
     "scripts": {
         "start": "parcel src/index.html",
-        "build": "parcel build src/index.html --no-scope-hoist"
+        "build": "parcel build src/index.html --no-scope-hoist --public-url ./"
     },
     "keywords": [],
     "author": "Lareine Han",
