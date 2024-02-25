@@ -1,6 +1,5 @@
 // sizeConverter.js
 import sizesData from './sizes.js'; // Import the sizesData from sizes.js
-import { convert } from './script.js'; // Import the convert function from script.js
 
 let selectedSize = 0;
 
@@ -143,4 +142,42 @@ function getSizesForRegion(region) {
 	} else return [];
 }
 
-export { setDefaultSize, populateSizes, convertSize, getSizesForRegion };
+function convert() {
+	let sourceRegion = document.getElementById('source_region').value;
+	let targetRegion = document.getElementById('target_region').value;
+	let chosenSize = document.querySelector(
+		'.size-buttons-container button.active'
+	).innerHTML;
+	let selectedSize = parseFloat(chosenSize); // Assign the selected size as a number
+	console.log(
+		'sourceRegion:',
+		sourceRegion,
+		'targetRegion:',
+		targetRegion,
+		'selectedSize:',
+		selectedSize,
+		typeof selectedSize // typeof selectedSize is number
+	);
+
+	if (!targetRegion) {
+		alert('error: Please select "To" area');
+		return;
+	}
+
+	let convertedSize = convertSize(selectedSize, sourceRegion, targetRegion);
+
+	if (isNaN(convertedSize)) {
+		document.getElementById('output').innerHTML = "Please select 'To' area";
+	} else {
+		document.getElementById('output').innerHTML =
+			'Size ' + convertedSize + ' in ' + targetRegion;
+	}
+}
+
+export {
+	setDefaultSize,
+	populateSizes,
+	convertSize,
+	getSizesForRegion,
+	convert,
+};

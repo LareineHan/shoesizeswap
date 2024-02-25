@@ -3,24 +3,29 @@
     "version": "1.0.0",
     "description": "",
     "type": "module",
-    "source":"src/index.html",
+    "source": "src/index.html",
     "browserslist": "> 0.5%, last 2 versions, not dead",
     "scripts": {
         "start": "parcel src/index.html",
-        "build": "parcel build --dist-dir public"
+        "build": "parcel build src/index.html --no-scope-hoist"
     },
     "keywords": [],
     "author": "Lareine Han",
     "license": "MIT",
     "devDependencies": {
-        "parcel": "latest"
+        "cssnano": "^6.0.5",
+        "parcel": "latest",
+        "parcel-bundler": "^1.12.5",
+        "postcss": "^8.4.35"
     },
     "dependencies": {
+        "autoprefixer": "^10.4.17",
         "feather-icons": "^4.29.1",
-        "jquery": "^3.7.0"
+        "jquery": "^3.7.0",
+        "parcel-bundler": "^1.12.5",
+        "postcss-nested": "^6.0.1"
     },
     "engines": {
         "node": "20.11.1"
     }
 }
-

@@ -1,24 +1,8 @@
-/* body {
-    font-family: 'Roboto', Arial, sans-serif;
-    max-width: 100%;
-    overflow-x: hidden;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: hsla(234, 61%, 94%, 0.72); /* light gray background */
-
 
   body {
     font-family: 'Roboto', Arial, sans-serif;
     height: 100vh;
     margin: 0;
-    /* display: flex;
-    flex-wrap: wrap;
-    flex-direction: row; */
     justify-content: center;
     align-items: center;
     background: linear-gradient(
