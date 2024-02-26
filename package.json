@@ -11,7 +11,7 @@
     },
     "keywords": [],
     "author": "Lareine Han",
-    "license": "MIT",
+    "license": "ISC",
     "devDependencies": {
         "cssnano": "^6.0.5",
         "parcel": "latest",

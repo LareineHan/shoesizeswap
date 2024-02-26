@@ -7,7 +7,7 @@ function setDefaultSize() {
 	let defaultRegion = sizesData[0].region;
 	let defaultSize = sizesData[0].sizes[5];
 	document.getElementById('output').innerHTML = "Choose 'To'.";
-	console.log(defaultRegion, defaultSize);
+	console.log('default size and region is all set', defaultRegion, defaultSize);
 	// Set the default size button as active
 	let sizeButtons = document.querySelectorAll('.size-buttons-container button');
 
@@ -51,7 +51,7 @@ function convertSize(sourceSize, sourceRegion, targetRegion) {
 	}
 }
 
-// 1. pupulateSizes will remove the existing buttons in the container
+// 1. populateSizes will remove the existing buttons in the container
 //    and add new buttons based on the selected region.
 // 2. The selected size is set to 0 and the convert function is called.
 
@@ -80,7 +80,7 @@ function populateSizes(region, targetElementId) {
 			targetElement.appendChild(button);
 		});
 	}
-	setDefaultSize();
+	// setDefaultSize();
 
 	// Add a refresh button
 	let refreshButton = document.createElement('button');
@@ -145,9 +145,13 @@ function getSizesForRegion(region) {
 function convert() {
 	let sourceRegion = document.getElementById('source_region').value;
 	let targetRegion = document.getElementById('target_region').value;
-	let chosenSize = document.querySelector(
+	let activeButton = document.querySelector(
 		'.size-buttons-container button.active'
-	).innerHTML;
+	);
+	let chosenSize = activeButton ? activeButton.innerHTML : null;
+	// let chosenSize = document.querySelector(
+	// 	'.size-buttons-container button.active'
+	// ).innerHTML;
 	let selectedSize = parseFloat(chosenSize); // Assign the selected size as a number
 	console.log(
 		'sourceRegion:',
