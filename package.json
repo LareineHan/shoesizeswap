@@ -1,34 +1,30 @@
 {
-    "name": "shoe-size-converter",
-    "version": "1.0.0",
-    "description": "A shoe size converter app",
-    "scripts": {
-        "start": "parcel src/index.html",
-        "build": "parcel build src/index.html"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/LareineHan/shoesizeswap.git"
-    },
-    "keywords": [
-        "shoe",
-        "size",
-        "converter",
-        "app"
-    ],
-    "author": "Lareine Han",
-    "license": "MIT",
-    "devDependencies": {
-        "parcel": "2.11.0"
-    },
-    "dependencies": {
-        "@popperjs/core": "^2.11.8",
-        "bootstrap": "^5.2.3",
-        "feather-icons": "^4.29.1",
-        "jquery": "^3.7.1",
-        "popper.js": "^1.16.1"
-    },
-    "engines": {
-        "node": "18.19.1"
-    }
+  "name": "showsizeswap",
+  "version": "1.0.0",
+  "description": "shoe size conveter web app",
+
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --no-source-maps --no-cache --public-url ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LareineHan/shoesizeswap.git"
+  },
+  "keywords": [
+    "shoe",
+    "size",
+    "swap"
+  ],
+  "author": "Lareine Han",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.0.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.11.0",
+    "cssnano": "^6.0.5",
+    "postcss": "^8.4.35",
+    "sass": "^1.42.1"
+  }
 }
