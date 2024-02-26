@@ -4,8 +4,8 @@
   "description": "shoe size converter web app",
 
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url ."
+    "dev": "parcel index.html",
+    "build": "parcel build index.html --public-url ."
   },
   "keywords": [
     "shoe",
