@@ -1,31 +1,34 @@
 {
-    "name": "Shoe Size Swap",
+    "name": "shoe-size-converter",
     "version": "1.0.0",
-    "description": "",
-    "type": "module",
-    "source": "src/index.html",
-    "browserslist": "> 0.5%, last 2 versions, not dead",
+    "description": "A shoe size converter app",
     "scripts": {
         "start": "parcel src/index.html",
-        "build": "parcel build src/index.html --no-scope-hoist"
+        "build": "parcel build src/index.html"
     },
-    "keywords": [],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/LareineHan/shoesizeswap.git"
+    },
+    "keywords": [
+        "shoe",
+        "size",
+        "converter",
+        "app"
+    ],
     "author": "Lareine Han",
-    "license": "ISC",
+    "license": "MIT",
     "devDependencies": {
-        "cssnano": "^6.0.5",
-        "parcel": "latest",
-        "parcel-bundler": "^1.12.5",
-        "postcss": "^8.4.35"
+        "parcel": "2.11.0"
     },
     "dependencies": {
-        "autoprefixer": "^10.4.17",
+        "@popperjs/core": "^2.11.8",
+        "bootstrap": "^5.2.3",
         "feather-icons": "^4.29.1",
-        "jquery": "^3.7.0",
-        "parcel-bundler": "^1.12.5",
-        "postcss-nested": "^6.0.1"
+        "jquery": "^3.7.1",
+        "popper.js": "^1.16.1"
     },
     "engines": {
-        "node": "20.11.1"
+        "node": "18.19.1"
     }
 }
