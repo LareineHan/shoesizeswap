@@ -178,10 +178,4 @@ function convert() {
 	}
 }
 
-export {
-	setDefaultSize,
-	populateSizes,
-	convertSize,
-	getSizesForRegion,
-	convert,
-};
+export { setDefaultSize, populateSizes, getSizesForRegion, convert };

@@ -2,7 +2,6 @@ import sizesData from './sizes.js';
 import {
 	setDefaultSize,
 	populateSizes,
-	convertSize,
 	getSizesForRegion,
 	convert,
 } from './converter.js';
