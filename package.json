@@ -1,31 +1,22 @@
 {
     "name": "Shoe Size Swap",
     "version": "1.0.0",
-    "description": "",
-    "type": "module",
-    "source": "src/index.html",
+    "source": "src/js/script.js",
     "browserslist": "> 0.5%, last 2 versions, not dead",
     "scripts": {
-        "start": "parcel src/index.html",
-        "build": "parcel build src/index.html --no-scope-hoist"
+        "dev": "parcel src/index.html",
+        "build": "parcel build src/index.html --public-url ./"
     },
     "keywords": [],
     "author": "Lareine Han",
     "license": "ISC",
-    "devDependencies": {
-        "cssnano": "^6.0.5",
-        "parcel": "latest",
-        "parcel-bundler": "^1.12.5",
-        "postcss": "^8.4.35"
-    },
     "dependencies": {
         "autoprefixer": "^10.4.17",
         "feather-icons": "^4.29.1",
-        "jquery": "^3.7.0",
-        "parcel-bundler": "^1.12.5",
-        "postcss-nested": "^6.0.1"
+        "jquery": "^3.7.0"
     },
-    "engines": {
-        "node": "20.11.1"
+    "devDependencies": {
+        "parcel": "^2.11.0",
+        "sass": "^1.71.1"
     }
 }
