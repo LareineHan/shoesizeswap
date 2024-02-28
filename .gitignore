@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-..postcssrc.json,
-=======
-.postcssrc.json,
->>>>>>> 587b52515fc3cc7f3641520afbe8648d25e0443f
+
 node_modules
 .parcel-cache
 package-lock.json
 .htmlnanorc
+dist
