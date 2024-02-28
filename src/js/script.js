@@ -1,3 +1,4 @@
+import '../css/styles.scss';
 import sizesData from './sizes.js';
 import {
 	setDefaultSize,
