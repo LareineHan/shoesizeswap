@@ -1,4 +1,4 @@
-export default sizesData = [
+const sizesData = [
 	{
 		region: 'US(M)',
 		sizes: [
@@ -48,4 +48,5 @@ export default sizesData = [
 		],
 	},
 ];
-// export default sizesData;
+
+export default sizesData;
