@@ -619,7 +619,7 @@ targetRegionSelect.addEventListener("change", function() {
 },{"./sizes.js":"gqr1V","./converter.js":"c4tuP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gqr1V":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-const sizesData = [
+exports.default = sizesData = [
     {
         region: "US(M)",
         sizes: [
@@ -875,8 +875,7 @@ const sizesData = [
             55
         ]
     }
-];
-exports.default = sizesData;
+]; // export default sizesData;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
@@ -914,7 +913,6 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "setDefaultSize", ()=>setDefaultSize);
 parcelHelpers.export(exports, "populateSizes", ()=>populateSizes);
-parcelHelpers.export(exports, "convertSize", ()=>convertSize);
 parcelHelpers.export(exports, "getSizesForRegion", ()=>getSizesForRegion);
 parcelHelpers.export(exports, "convert", ()=>convert);
 var _sizesJs = require("./sizes.js"); // Import the sizesData from sizes.js

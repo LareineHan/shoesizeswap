@@ -16,6 +16,7 @@
         "jquery": "^3.7.0"
     },
     "devDependencies": {
+        "@parcel/transformer-sass": "^2.11.0",
         "parcel": "^2.11.0",
         "sass": "^1.71.1"
     }
