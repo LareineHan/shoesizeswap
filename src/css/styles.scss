@@ -14,7 +14,7 @@
   }
   .montserrat {
     font-family: 'montserrat', sans-serif;
-    font-size: 1.3em;
+    font-size: 24px; //  1.3em; // in pixels it
     font-style: italic;
     text-align: center;
   }
@@ -110,7 +110,7 @@
   select {
     padding: 10px;
     margin: auto;
-    font-size: 1rem;
+    font-size: 20px;
     color: whitesmoke; /* dark gray text */
     border: 2px solid #404040; /* indigo border */
     border-radius: none;
@@ -222,12 +222,15 @@
   .form-group {
     max-width: 100%;
   }
+  .select {
+    padding: auto;
+  }
   .source-region-div, .target-region-div {
     margin: 10px;
-    font-size: 0.8em;
+    font-size: 1.5em;
   }
   .source-region-div select, .target-region-div select, label.source-size, label.target-size {
-    margin: 1em 1rem;
+    margin: 1.5em 1.5rem;
 
   }
   .source-region-div label, .target-region-div label {
@@ -235,7 +238,7 @@
   }
   .output-div {
     margin: 10px;
-    font-size: 0.7em;
+    font-size: 24px;
   }
   .slogan {
     display: none;
