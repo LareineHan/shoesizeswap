@@ -1,22 +1,22 @@
 // sizeConverter.js
+import { error } from 'jquery';
 import sizesData from './sizes.js'; // Import the sizesData from sizes.js
 
 let selectedSize = 0;
 
 function setDefaultSize() {
 	let defaultRegion = sizesData[0].region;
-	let defaultSize = sizesData[0].sizes[5];
+	let defaultSize = sizesData[0].sizes[7];
 	document.getElementById('output').innerHTML = "Choose 'To'.";
 	console.log('default size and region is all set', defaultRegion, defaultSize);
-	// Set the default size button as active
 	let sizeButtons = document.querySelectorAll('.size-buttons-container button');
 
 	sizeButtons.forEach((button) => {
 		if (parseFloat(button.value) === defaultSize) {
-			button.classList.add('active');
+			button.classList.add('clicked');
 			selectedSize = defaultSize;
 		} else {
-			button.classList.remove('active');
+			button.classList.remove('clicked');
 		}
 	});
 }
@@ -56,11 +56,13 @@ function convertSize(sourceSize, sourceRegion, targetRegion) {
 // 2. The selected size is set to 0 and the convert function is called.
 
 function populateSizes(region, targetElementId) {
+	// targetElementId is size-button (the button container)
 	let targetElement = document.getElementsByClassName(targetElementId)[0];
-	// targetElement is the container for the size buttons for the selected region
-	targetElement.innerHTML = '';
 
+	// targetElement is the container for the size buttons for the selected region
+	targetElement.innerHTML = ''; // Clear the existing buttons
 	let sizes = getSizesForRegion(region); // source region sizes array
+
 	if (sizes) {
 		sizes.forEach((size) => {
 			let button = document.createElement('button');
@@ -71,7 +73,7 @@ function populateSizes(region, targetElementId) {
 					'.size-buttons-container button'
 				);
 				sizeButtons.forEach((button) => {
-					button.classList.toggle('active', button === this);
+					button.classList.toggle('clicked', button === this);
 				});
 
 				selectedSize = parseFloat(this.value); // Assign the selected size as a float value
@@ -91,7 +93,7 @@ function populateSizes(region, targetElementId) {
 			'.size-buttons-container button'
 		);
 		sizeButtons.forEach((button) => {
-			button.classList.remove('active');
+			button.classList.remove('clicked');
 		});
 		selectedSize = 0; // Reset selected size to default
 		let sourceRegionSelect = document.getElementById('source_region');
@@ -99,7 +101,7 @@ function populateSizes(region, targetElementId) {
 		let output = document.getElementById('output');
 		sourceRegionSelect.selectedIndex = 0; // Set source_region to default (index 0)
 		targetRegionSelect.selectedIndex = 0; // Set target_region to default (index 0)
-		output.innerHTML = ''; // Clear output
+		output.innerHTML = "Choose 'To'"; //change output
 		populateSizes(sourceRegionSelect.value, 'size-button');
 	});
 	targetElement.appendChild(refreshButton);
@@ -108,6 +110,10 @@ function populateSizes(region, targetElementId) {
 	let targetRegionSelect = document.getElementById('target_region');
 	let sourceRegion = document.getElementById('source_region').value;
 	let defaultOption = new Option('Select', '');
+	console.log('targetRegionSelect:', targetRegionSelect);
+	console.log('sourceRegion:', sourceRegion);
+	let output = document.getElementById('output');
+	output.innerHTML = "Select 'To' area.";
 	targetRegionSelect.innerHTML = ''; // Clear existing options
 	targetRegionSelect.add(defaultOption);
 
@@ -145,12 +151,12 @@ function getSizesForRegion(region) {
 function convert() {
 	let sourceRegion = document.getElementById('source_region').value;
 	let targetRegion = document.getElementById('target_region').value;
-	let activeButton = document.querySelector(
-		'.size-buttons-container button.active'
+	let clickedButton = document.querySelector(
+		'.size-buttons-container button.clicked'
 	);
-	let chosenSize = activeButton ? activeButton.innerHTML : null;
+	let chosenSize = clickedButton ? clickedButton.innerHTML : null;
 	// let chosenSize = document.querySelector(
-	// 	'.size-buttons-container button.active'
+	// 	'.size-buttons-container button.clicked'
 	// ).innerHTML;
 	let selectedSize = parseFloat(chosenSize); // Assign the selected size as a number
 	console.log(
@@ -164,17 +170,25 @@ function convert() {
 	);
 
 	if (!targetRegion) {
-		alert('error: Please select "To" area');
+		// alert('error: Please select "To" area');
+		document.getElementById('output').innerHTML = "'To' is still empty.";
 		return;
 	}
 
 	let convertedSize = convertSize(selectedSize, sourceRegion, targetRegion);
 
 	if (isNaN(convertedSize)) {
-		document.getElementById('output').innerHTML = "Please select 'To' area";
+		document.getElementById('output').innerHTML = 'Choose Size.';
+		console.log('convertedSize is NaN');
 	} else {
 		document.getElementById('output').innerHTML =
 			'Size ' + convertedSize + ' in ' + targetRegion;
+	}
+
+	if (document.getElementById('output').innerHTML == 'Choose Size.') {
+		console.log('드디어된다.');
+	} else {
+		console.log('아직도 안된다.');
 	}
 }
 

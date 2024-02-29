@@ -10,5 +10,6 @@ let bundler = new Parcel({
 		port: 3000,
 	},
 });
+console.log('bundler watcher working', bundler);
 
 await bundler.watch();
