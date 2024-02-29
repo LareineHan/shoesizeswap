@@ -34,6 +34,7 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
+    margin-bottom: 12px;
   }
   .logo-container div {
     margin: 5px;
@@ -223,12 +224,12 @@
     max-width: 100%;
   }
   .source-region-div, .target-region-div {
-    margin: 10px;
-    font-size: 18px;
+    margin: 18px;
+
   }
   .source-region-div select, .target-region-div select, label.source-size, label.target-size {
-    margin: 0.5em 0.5em;
-    font-size: 18px;
+    margin: 0;
+    font-size: 22px;
   }
 
   .source-region-div label, .target-region-div label {
