@@ -33,7 +33,7 @@
   .logo-container {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    flex-direction: row;
   }
   .logo-container div {
     margin: 5px;
@@ -43,8 +43,8 @@
     color: white;
     font-family: 'montserrat', sans-serif;
     font-weight: bolder;
-    font-size: 2.5em;
-    letter-spacing: 6px;
+    font-size: 2.4em;
+    // letter-spacing: 6px;
     text-shadow: 0px 0px 25px hotpink, 0px 0px 25px rgb(0, 0, 191),
       0px 0px 25px rgb(0, 0, 191), 0px 0px 25px rgb(0, 0, 191);
   }
@@ -124,7 +124,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    max-width: 40em;
+    max-width: 35em;
     border-radius: none;
   }
   
@@ -210,6 +210,7 @@
 .social-links{
   margin-top:10px;
 } 
+
 @media  screen and (max-width: 615px){
   h1 {
     font-size: 1.4em;
@@ -239,15 +240,11 @@
   .slogan {
     display: none;
   }
+
 }
 
-  @media (max-width: 326px) {
-    .form-group .arrow-icon {
-      display: none;
-    }
-    .form-group {
-      max-width: 100vh;
-      margin-right: 20px;
-      margin-left: 20px;
-    }
+@media (max-width: 326px) {
+  .form-group .arrow-icon {
+    display: none;
   }
+}
