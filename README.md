@@ -1,4 +1,4 @@
-# Shoe Size Swap
+# :star: JavaScript web application: Shoe Size Swap :star:
 
 Shoe Size Swap is a simple web application that allows you to convert shoe sizes between different regions (US, UK, EU, etc.). It's built with JavaScript and uses Parcel for bundling.
 
@@ -41,6 +41,8 @@ Lareine Han
 
 Thank you for checking out my project! You can learn more about me and my work at the following links:
 
-[![Website](https://img.icons8.com/fluent/48/000000/domain.png)](https://lareinehan.com) [![LinkedIn](https://img.icons8.com/fluent/48/000000/linkedin.png)](https://www.linkedin.com/in/lareinehan) [![Threads](https://img.icons8.com/fluent/48/000000/threads.png)](https://threads.com/lareinehan)
+- 🌐 [Website](https://lareinehan.com)
+- 💼 [LinkedIn](https://www.linkedin.com/in/lareinehan)
+- 🧵 [Threads](https://threads.com/lareinehan)
 
 Please feel free to reach out if you have any questions or feedback!
