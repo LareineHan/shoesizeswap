@@ -27,7 +27,7 @@ To build the application for production, run `npm run build`. This will create a
 
 ## Live Version
 
-You can also view the live version [here](https://shoe-size-converter.netlify.app/)
+You can also view the live version [here](https://shoesizeswap.netlify.app/)
 
 ## License
 
